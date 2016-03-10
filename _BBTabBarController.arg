@@ -1,0 +1,601 @@
+BBTabBarController: arg1 ={
+	    child =     (
+	                {
+	            backgroundColor = white;
+	            data =             {
+	                date = 1457020800;
+	                from =                 {
+	                    code = BJP;
+	                    id = BJP;
+	                    name = "\U5317\U4eac";
+	                };
+	                fromName = "\U5317\U4eac";
+	                hiddenHotel = 0;
+	                highSpeed = "";
+	                to =                 {
+	                    code = SHH;
+	                    id = SHH;
+	                    name = "\U4e0a\U6d77";
+	                };
+	                toName = "\U4e0a\U6d77";
+	            };
+	            grouped = 0;
+	            offsetTop = 0;
+	            pageId = 1457081660750;
+	            sections =             (
+	                                {
+	                    rows =                     (
+	                    );
+	                },
+	                                {
+	                    rows =                     (
+	                                                {
+	                            action = "t.toSelectStation";
+	                            bind =                             {
+	                                oneText = fromName;
+	                                secondText = toName;
+	                            };
+	                            exchangeAction = "t.exchange";
+	                            exchangeImage = "zx-exchange@30x30";
+	                            height = 96;
+	                            key = station;
+	                            oneLabel = "\U51fa\U53d1\U5730";
+	                            secondLabel = "\U76ee\U7684\U5730";
+	                            type = TAExchangeRow;
+	                        },
+	                                                {
+	                            bind =                             {
+	                                maximumDate = maxDate;
+	                                minimumDate = minDate;
+	                                value = date;
+	                            };
+	                            formatter = "LLL d E";
+	                            height = 52;
+	                            key = date;
+	                            maximumDate = 1462118400;
+	                            minimumDate = 1457020800;
+	                            text = "\U51fa\U53d1\U65e5\U671f";
+	                            type = calendar;
+	                            valueChangedAction = "t.changeDate";
+	                        },
+	                                                {
+	                            bind =                             {
+	                                value = highSpeed;
+	                            };
+	                            height = 52;
+	                            hidden = 0;
+	                            key = highSpeed;
+	                            text = "\U53ea\U67e5\U8be2\U9ad8\U94c1/\U52a8\U8f66";
+	                            type = switch;
+	                        }
+	                    );
+	                },
+	                                {
+	                    header = "  ";
+	                    headerBackgroundColor = white;
+	                    rows =                     (
+	                                                {
+	                            action = "t.query";
+	                            bind =                             {
+	                                text = queryActionText;
+	                            };
+	                            text = "\Ue932 \U67e5\U8be2";
+	                            textFont = ZXIcon;
+	                            type = TAHighlightRow;
+	                        }
+	                    );
+	                },
+	                                {
+	                    bind =                     {
+	                        hidden = hiddenHotel;
+	                    };
+	                    header = " \n ";
+	                    headerBackgroundColor = white;
+	                    rows =                     (
+	                                                {
+	                            action = "t.serviceFromButton";
+	                            items =                             (
+	                                                                {
+	                                    image = "zx-flight##fe6c5a";
+	                                    title = "\U673a\U7968";
+	                                    titleColor = "#333333";
+	                                },
+	                                                                {
+	                                    image = "zx-hotel##fe6c5a";
+	                                    title = "\U9152\U5e97";
+	                                    titleColor = "#333333";
+	                                },
+	                                                                {
+	                                    image = "zx-bus##fe6c5a";
+	                                    title = "\U6c7d\U8f66\U7968";
+	                                    titleColor = "#333333";
+	                                }
+	                            );
+	                            separatorColor = clear;
+	                            type = buttonGroup;
+	                            wrapImage = 0;
+	                        }
+	                    );
+	                },
+	                                {
+	                    header = " ";
+	                    headerBackgroundColor = white;
+	                    rows =                     (
+	                                                {
+	                            action = "t.open";
+	                            data =                             {
+	                                class = webView;
+	                                html = "<!DOCTYPE html><html><head><meta name='viewport' content='initial-scale=1, width=device-width, maximum-scale=2, user-scalable=yes'></head><body><div style='font-size:16px;padding:20px 10px;'><h3>2016\U5e74\U6625\U8fd0\U706b\U8f66\U7968\U9884\U552e\U671f\U65f6\U95f4\U8868</h3><p>2016\U5e74\U6625\U8fd0\U9884\U552e\U671f\U5c06\U4ece2015\U5e7411\U670826\U65e5\U8d77\Uff0c\U5f53\U65e5\U7535\U8bdd\U8ba2\U7968\U53ca\U4e92\U8054\U7f51\U552e\U7968\U53ef\U8ba21\U670824\U65e5\U706b\U8f66\U7968\U300212\U67084\U65e5\U9884\U8ba2\U814a\U6708\U5eff\U4e09\U7684\U8f66\U7968\U3002</p><p style='color:red;'>\U8fd8\U672a\U901a\U8fc7\U624b\U673a\U6838\U9a8c\U7684\U7528\U6237\U8bf7\U53bb\U201c\U66f4\U591a->\U6211\U768412306\U201d\U4e2d\U6838\U9a8c\U624b\U673a\U53f7\Uff0c\U672a\U6838\U9a8c\U624b\U673a\U53f7\U7684\U8d26\U53f7\U5c06\U4e0d\U80fd\U8d2d\U7968\U3002</p><p><img style='max-width:100%;' src='http://n.sinaimg.cn/news/transform/20151119/FS-e-fxkwuwy6967581.jpg' /></p></div></body></html>";
+	                                title = "2016\U6625\U8fd0\U8d2d\U7968\U65e5\U5386";
+	                                toolbarHidden = 1;
+	                            };
+	                            text = "2016\U6625\U8fd0\U8d2d\U7968\U65e5\U5386";
+	                        }
+	                    );
+	                }
+	            );
+	            separatorStyle = noextra;
+	            tabBarItem =             {
+	                image = "zx-magnifier@25x25";
+	                selectedImage = "zx-magnifier-f@25x25";
+	                title = "\U8ba2\U7968";
+	            };
+	            titlebar =             {
+	                action = "t.changeStudent";
+	                items =                 (
+	                    "\U666e\U901a\U7968",
+	                    "\U5b66\U751f\U7968"
+	                );
+	                selectedIndex = 0;
+	            };
+	            viewDidLoad = "t.init";
+	            viewDidPresent = "t.statusInQuery";
+	        },
+	                {
+	            data =             {
+	                currentLoading = 0;
+	                hiddenCurrent = 1;
+	                hiddenLogin = 0;
+	                incompleteOrders =                 (
+	                );
+	                nomore = 1;
+	                offline = 1;
+	                orderLoading = 0;
+	                orders =                 (
+	                );
+	                page = 1;
+	                size = 8;
+	                titleOrders = "\U8ba2\U5355(\U79bb\U7ebf)";
+	            };
+	            grouped = 1;
+	            leftItem =             {
+	                action = "t.cleanOrders";
+	                system = trash;
+	            };
+	            pageId = 1457081660751;
+	            refreshAction = "t.initOrders";
+	            rightItem =             {
+	                action = "t.openServiceOrder";
+	                title = "\U643a\U7a0b\U8ba2\U5355";
+	            };
+	            sections =             (
+	                                {
+	                    bind =                     {
+	                        hidden = hiddenLogin;
+	                    };
+	                    rows =                     (
+	                                                {
+	                            action = "t.initOrders";
+	                            text = "\U767b\U5f55\U67e5\U770b\U5728\U7ebf\U8ba2\U5355\U3001\U9000\U7968\U3001\U6539\U7b7e";
+	                            type = button;
+	                        }
+	                    );
+	                },
+	                                {
+	                    bind =                     {
+	                        hidden = hiddenCurrent;
+	                        iterate = incompleteOrders;
+	                        loading = currentLoading;
+	                    };
+	                    emptyRow =                     {
+	                        identifier = empty;
+	                        text = "\U65e0\U672a\U5b8c\U6210\U8ba2\U5355";
+	                        textColor = gray;
+	                    };
+	                    header = "\U672a\U5b8c\U6210\U8ba2\U5355";
+	                    rowTemplate =                     {
+	                        action = "t.incompleteOrder";
+	                        bind =                         {
+	                            arrivalStationText = arrivalStationText;
+	                            codeText = codeText;
+	                            departStationText = departStationText;
+	                            departTimeText = departTimeText;
+	                            passengerNamesText = passengerNamesText;
+	                            priceText = priceText;
+	                            statusColorText = statusColorText;
+	                            statusText = statusText;
+	                            tickets = tickets;
+	                        };
+	                        height = 112;
+	                        type = TAMyOrderRow;
+	                    };
+	                },
+	                                {
+	                    bind =                     {
+	                        header = titleOrders;
+	                        iterate = orders;
+	                        loading = orderLoading;
+	                    };
+	                    emptyRow =                     {
+	                        identifier = empty;
+	                        text = "\U65e0\U8ba2\U5355";
+	                        textColor = gray;
+	                    };
+	                    rowTemplate =                     {
+	                        action = "t.toOrderPage";
+	                        bind =                         {
+	                            arrivalStationText = arrivalStationText;
+	                            codeText = codeText;
+	                            departStationText = departStationText;
+	                            departTimeText = departTimeText;
+	                            passengerNamesText = passengerNamesText;
+	                            priceText = priceText;
+	                            statusColorText = statusColorText;
+	                            statusText = statusText;
+	                            tickets = tickets;
+	                        };
+	                        height = 112;
+	                        type = TAMyOrderRow;
+	                    };
+	                },
+	                                {
+	                    rows =                     (
+	                                                {
+	                            action = "t.loadOrders";
+	                            bind =                             {
+	                                hidden = nomore;
+	                            };
+	                            text = "\U66f4\U591a \Ue926";
+	                            textFont = ZXIcon;
+	                            type = button;
+	                        }
+	                    );
+	                },
+	                                {
+	                    footer = "\U9000\U7968\U3001\U6539\U7b7e\U9700\U8981\U5728\U5f00\U8f66\U65f6\U95f4\U534a\U5c0f\U65f6\U4ee5\U524d\U529e\U7406\Uff0c\U5982\U9700\U5728\U5f00\U8f66\U524d\U534a\U5c0f\U65f6\U5185\U6216\U8005\U5f00\U8f66\U540e\U529e\U7406\U6539\U7b7e\Uff0c\U8bf7\U5230\U8f66\U7968\U51fa\U53d1\U7ad9\U529e\U7406\n\U6539\U7b7e\U89c4\U5219\Uff1a\U8f66\U7968\U53ea\U80fd\U6539\U7b7e\U4e00\U6b21\Uff0c\U5f00\U8f66\U524d48\U5c0f\U65f6\U4ee5\U5185\U53ea\U53ef\U6539\U7b7e\U5f00\U8f66\U524d\U548c\U5f00\U8f66\U65e5\U671f\U5f53\U65e5\U7684\U8f66\U7968\U3002\n\U94c1\U9053\U90e8\U9000\U7968\U65b0\U89c4\Uff1a\U5f00\U8f6615\U5929\U4ee5\U524d\U4e0d\U6536\U9000\U7968\U8d39\Uff0c2\U5929\U524d\U9000\U7968\U6536\U53d65%\U9000\U7968\U8d39\Uff0c48\Uff5e24\U5c0f\U65f6\U5185\U6536\U53d610%\Uff0c24\U5c0f\U65f6\U5185\U6536\U53d620%\U3002\U5bf9\U5f00\U8f66\U524d48\U5c0f\U65f6\Uff5e15\U5929\U671f\U95f4\U5185\Uff0c\U6539\U7b7e\U6216\U53d8\U66f4\U5230\U7ad9\U81f3\U8ddd\U5f00\U8f6615\U5929\U4ee5\U4e0a\U7684\U5176\U4ed6\U5217\U8f66\Uff0c\U53c8\U5728\U8ddd\U5f00\U8f6615\U5929\U524d\U9000\U7968\U7684\Uff0c\U4ecd\U6838\U65365%\U7684\U9000\U7968\U8d39\U3002\n\U6625\U8fd0\U671f\U95f4\U7684\U6539\U7b7e\U7968\U529e\U7406\U9000\U7968\U5c06\U6536\U53d620%\U7684\U624b\U7eed\U8d39\U3002";
+	                }
+	            );
+	            tabBarItem =             {
+	                image = "zx-order@25x25";
+	                selectedImage = "zx-order-f@25x25";
+	                title = "\U8ba2\U5355";
+	            };
+	            title = "\U8ba2\U5355";
+	            viewDidPresent = "t.statusInOrders";
+	        },
+	                {
+	            data =             {
+	                hideNoti = 1;
+	                monitors =                 (
+	                );
+	                rotate = 1;
+	            };
+	            grouped = 1;
+	            hidesBottomBarWhenPushed = 0;
+	            pageId = 1000005;
+	            rightItem =             {
+	                action = "t.toMonitor";
+	                title = "\U65b0\U589e";
+	            };
+	            sections =             (
+	                                {
+	                    bind =                     {
+	                        iterate = monitors;
+	                    };
+	                    emptyRow =                     {
+	                        text = "\U6682\U65e0\U76d1\U63a7\U4efb\U52a1\Uff0c\U6700\U591a\U53ef\U521b\U5efa5\U4e2a\U3002";
+	                        textColor = gray;
+	                    };
+	                    footer = "\U7a0b\U5e8f\U5728\U540e\U53f0\U8fd0\U884c\U65f6\U6216\U5173\U95ed\U540e\U4f1a\U7531\U670d\U52a1\U5668\U8f85\U52a9\U67e5\U7968\Uff0c\U6709\U7968\U540e\U901a\U77e5\U63d0\U9192\Uff0c\U4f46\U4e0d\U4f1a\U81ea\U52a8\U4e0b\U5355\Uff0c\U5982\U9700\U81ea\U52a8\U4e0b\U5355\U8bf7\U5728\U95f2\U65f6\U8ba9\U624b\U673a\U505c\U7559\U5728\U667a\U884c\U706b\U8f66\U7968\U4e2d\Uff0c\U5237\U7968\U65f6\U4e0d\U4f1a\U81ea\U52a8\U9501\U5c4f";
+	                    rowTemplate =                     {
+	                        action = "t.toMonitor";
+	                        bind =                         {
+	                            accessoryAction = action;
+	                            accessoryView = btn;
+	                            departArrivalStationText = title;
+	                            departDateText = date;
+	                            monitorTimeText = message;
+	                            seatTypeText = seat;
+	                        };
+	                        deletable = 1;
+	                        deletedAction = "t.delMonitor";
+	                        height = 76;
+	                        type = TAMonitorsRow;
+	                    };
+	                },
+	                                {
+	                    bind =                     {
+	                        hidden = hideNoti;
+	                    };
+	                    rows =                     (
+	                                                {
+	                            action = "t.regNoti";
+	                            detail = "\U5f00\U542f\U901a\U77e5\U540e\Uff0c\U624d\U80fd\U6536\U5230\U79bb\U7ebf\U67e5\U8be2\U6210\U529f\U7684\U63d0\U9192";
+	                            style = subtitle;
+	                            text = "\U5f00\U542f\U901a\U77e5";
+	                        }
+	                    );
+	                }
+	            );
+	            tabBarItem =             {
+	                image = "zx-webcam@25x25";
+	                selectedImage = "zx-webcam-f@25x25";
+	                title = "\U76d1\U63a7";
+	            };
+	            title = "\U76d1\U63a7\U4efb\U52a1";
+	            viewDidAppear = "t.updateMonitorsDisplay";
+	            viewDidPresent = "t.topViewController";
+	        },
+	                {
+	            data =             {
+	                ctrip =                 (
+	                                        {
+	                        detail = "\U5168\U56fd\U7279\U4ef7\U673a\U7968\U9884\U8ba2";
+	                        id = "ctrip-flight";
+	                        logo = "zx-flight@25x25";
+	                        orderURL = "http://m.ctrip.com/webapp/myctrip/accounts/login?from=%2Fwebapp%2Fmyctrip%2Forders%2Fflightorderlist?from=%2Fhtml5%2Fflight%2F&allianceid=283778&sid=735700";
+	                        source = service;
+	                        title = "\U673a\U7968\U9884\U8ba2";
+	                        url = "http://f1.suanya.cn/lp/fl?ref=hcpzs";
+	                    },
+	                                        {
+	                        detail = "\U5168\U56fd\U9152\U5e97\U4f4e\U4ef7\U9884\U8ba2";
+	                        id = "elong-hotel";
+	                        logo = "zx-hotel@25x25";
+	                        orderURL = "http://m.ctrip.com/webapp/myctrip/orders/hotelorderlist?from=%2Fwebapp%2Fhotel%2F";
+	                        source = service;
+	                        title = "\U9152\U5e97\U9884\U8ba2";
+	                        url = "http://f1.suanya.cn/lp/hl?ref=hcpzs";
+	                    },
+	                                        {
+	                        detail = "\U5168\U56fd\U6c7d\U8f66\U7968\U9646\U7eed\U5f00\U653e";
+	                        id = "ctrip-bus";
+	                        logo = "zx-bus@25x25";
+	                        orderURL = "https://accounts.ctrip.com/H5Login/MobileValidate?from=http%3A%2F%2Fm.ctrip.com%2Fwebapp%2Fmyctrip%2Forders%2Fbusorderlist&backUrl=http%3A%2F%2Fm.ctrip.com%2Fwebapp%2Fmyctrip%2Forders%2Fordertypelist&allianceid=283778&sid=735700";
+	                        source = service;
+	                        title = "\U6c7d\U8f66\U7968\U9884\U8ba2";
+	                        url = "http://m.ctrip.com/webapp/bus/bus/index?bus=1&utmSource=zhixing&ad=close&popup=close";
+	                    },
+	                                        {
+	                        detail = "\U65e0\U970012306\U8d26\U53f7\Uff0c\U8f66\U7968\U5feb\U9012\Uff0c\U9009\U4e0a\U4e0b\U94fa,\U8fde\U5750\Uff0c\U9760\U7a97";
+	                        id = "ctrip-train";
+	                        logo = "zx-train@25x25";
+	                        orderURL = "https://accounts.ctrip.com/H5Login/MobileValidate?from=http%3A%2F%2Fm.ctrip.com%2Fwebapp%2Fmyctrip%2Forders%2Ftrainorderlist&backUrl=http%3A%2F%2Fm.ctrip.com%2Fwebapp%2Fmyctrip%2Forders%2Fordertypelist%3Ffrom%3D%252Fwebapp%252Fmyctrip%252Findex&allianceid=283778&sid=732699";
+	                        source = service;
+	                        title = "\U706b\U8f66\U7968\U4ee3\U8d2d";
+	                        url = "http://m.ctrip.com/webapp/train/home/index?allianceid=283778&sid=732699";
+	                    },
+	                                        {
+	                        detail = "\U4e13\U8f66\U706b\U8f66\U7ad9\U63a5\U9001\Uff0c\U81ea\U9a7e\U79df\U8f66";
+	                        id = "ctrip-car";
+	                        logo = "zx-car@25x25";
+	                        orderURL = "http://m.ctrip.com/webapp/myctrip/orders/carunionorderlist?allianceid=283778&sid=735700";
+	                        title = "\U81ea\U9a7e\Uff0c\U63a5\U9001\U706b\U8f66\U7acb\U51cf30";
+	                        url = "http://m.ctrip.com/webapp/carch/challiance/zhixing/train?allianceid=283778&sid=735700&popup=close&autoawaken=close";
+	                    }
+	                );
+	                services =                 (
+	                );
+	            };
+	            grouped = 1;
+	            pageId = 1457081660752;
+	            sections =             (
+	                                {
+	                    rows =                     (
+	                                                {
+	                            action = "t.open";
+	                            data =                             {
+	                                page = trainQuery;
+	                            };
+	                            height = 60;
+	                            image = "zx-time-circle@25x25";
+	                            style = subtitle;
+	                            text = "\U65f6\U523b\U8868/\U6b63\U665a\U70b9";
+	                        }
+	                    );
+	                },
+	                                {
+	                    bind =                     {
+	                        iterate = ctrip;
+	                    };
+	                    header = "\U643a\U7a0b\U65d7\U4e0b";
+	                    rowTemplate =                     {
+	                        action = "t.openService";
+	                        bind =                         {
+	                            detail = detail;
+	                            image = logo;
+	                            text = title;
+	                        };
+	                        detailTextColor = gray;
+	                        height = 60;
+	                        image = "fa-image@25x25";
+	                        imageCornerRadius = 4;
+	                        style = subtitle;
+	                    };
+	                },
+	                                {
+	                    rows =                     (
+	                    );
+	                }
+	            );
+	            tabBarItem =             {
+	                image = "zx-service@25x25";
+	                selectedImage = "zx-service-f@25x25";
+	                title = "\U670d\U52a1";
+	            };
+	            title = "\U65c5\U884c\U670d\U52a1";
+	            viewDidPresent = "t.topViewController";
+	        },
+	                {
+	            data =             {
+	                accounts =                 (
+	                                        {
+	                        action = "t.toLoginInMore";
+	                        image = "zx-chinarailway##666666";
+	                        login = "\U65b012306\U8d26\U53f7\U767b\U5f55/\U6ce8\U518c";
+	                    },
+	                                        {
+	                        action = "t.switchAccount";
+	                        deletable = 1;
+	                        login = 18061995226;
+	                        password = "GxQ%1C%10c%1B(%08%C2%90";
+	                    }
+	                );
+	                hiddenHotel = 1;
+	                hiddenHotelText = "\U9152\U5e97\U673a\U7968\U9884\U8ba2\U529f\U80fd";
+	                logged = 0;
+	                "name_with_status" = "";
+	                notlogged = 1;
+	                scriptVer = "\U7248\U672c4206";
+	                useWebAPI = 0;
+	            };
+	            grouped = 1;
+	            pageId = 1000008;
+	            sections =             (
+	                                {
+	                    bind =                     {
+	                        iterate = accounts;
+	                    };
+	                    header = "12306\U8d26\U53f7\U5207\U6362";
+	                    rowTemplate =                     {
+	                        bind =                         {
+	                            accessoryType = checked;
+	                            action = action;
+	                            deletable = deletable;
+	                            image = image;
+	                            text = login;
+	                        };
+	                        deletedAction = "t.delAccount";
+	                        image = "zx-user3##666666";
+	                        style = value1;
+	                    };
+	                },
+	                                {
+	                    header = "\U9ed8\U8ba4\U4f7f\U7528\U79fb\U52a8\U7aef\U63a5\U53e3\Uff0c\U65e0\U6cd5\U4f7f\U7528\U65f6\U53ef\U6253\U5f00\U7f51\U9875\U7248";
+	                    rows =                     (
+	                                                {
+	                            bind =                             {
+	                                value = useWebAPI;
+	                            };
+	                            image = "zx-refresh-square##666666";
+	                            style = subtitle;
+	                            text = "\U7f51\U9875\U63a5\U53e3";
+	                            type = switch;
+	                            valueChangedAction = "t.switchAPI";
+	                        }
+	                    );
+	                },
+	                                {
+	                    bind =                     {
+	                        hidden = notlogged;
+	                    };
+	                    rows =                     (
+	                                                {
+	                            action = "t.toUserManger";
+	                            bind =                             {
+	                                detail = "name_with_status";
+	                            };
+	                            image = "zx-user##666666";
+	                            style = value1;
+	                            text = "\U6211\U768412306";
+	                        },
+	                                                {
+	                            action = "t.open";
+	                            data =                             {
+	                                page = passengers;
+	                            };
+	                            image = "zx-users##666666";
+	                            style = value1;
+	                            text = "\U8054\U7cfb\U4eba\U4fee\U6539";
+	                        },
+	                                                {
+	                            action = "t.toLogoutInMore";
+	                            image = "zx-logout##666666";
+	                            text = "\U9000\U51fa12306";
+	                        }
+	                    );
+	                },
+	                                {
+	                    rows =                     (
+	                                                {
+	                            action = "t.tel12306";
+	                            detail = "\U4ed8\U6b3e\U672a\U51fa\U7968";
+	                            image = "zx-tel##666666";
+	                            style = value1;
+	                            text = "\U81f4\U753512306";
+	                        },
+	                                                {
+	                            action = "t.open";
+	                            data =                             {
+	                                page = resetPassword;
+	                            };
+	                            image = "zx-key##666666";
+	                            text = "\U5fd8\U8bb0\U8d26\U53f7/\U5bc6\U7801";
+	                        },
+	                                                {
+	                            action = "t.open";
+	                            data =                             {
+	                                class = webView;
+	                                trustedDomain = "kyfw.12306.cn";
+	                                url = "https://kyfw.12306.cn/otn/gonggao/saleTicketMeans.html?linktypeid=means5";
+	                            };
+	                            image = "zx-question-circle##666666";
+	                            text = "\U8eab\U4efd\U6838\U9a8c\U987b\U77e5";
+	                        }
+	                    );
+	                },
+	                                {
+	                    rows =                     (
+	                                                {
+	                            action = "t.open";
+	                            data =                             {
+	                                baseURL = "http://www.g.cn";
+	                                class = webView;
+	                                html = "<!DOCTYPE html><html><head><meta name='viewport' content='initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no'></head><body><div style='font-size:16px;padding:20px 10px;'><h3>\U667a\U884c\U706b\U8f66\U7968    \U7248\U672c4.6.2</h3><p>\U667a\U884c\U706b\U8f66\U7968-\U4e70\U706b\U8f66\U7968\U5fc5\U5907\Uff0c\U65e0\U624b\U7eed\U8d39\Uff0c\U4fdd\U9669\U8d39\U4ee5\U53ca\U5176\U4ed6\U9644\U52a0\U8d39\U7528\Uff0c\U8ba2\U7968\U5b8c\U6210\U540e\U53ef\U76f4\U63a5\U5728\U706b\U8f66\U7ad9\U4ee5\U53ca\U4ee3\U552e\U70b9\U53d6\U7968\U3002</p><h3>\U529f\U80fd</h3><ul><li>\U706b\U8f66\U7968\U6570\U636e\U6765\U6e9012306\U5b98\U65b9\U7f51\U7ad9</li><li>\U8ba2\U7968\U67e5\U8be2,\U8ba2\U7968(\U652f\U6301\U591a\U4eba),\U652f\U4ed8,\U672a\U5b8c\U6210\U8ba2\U5355\U652f\U4ed8,\U8ba2\U5355\U67e5\U8be2,\U9000\U7968,\U6539\U7b7e,\U8054\U7cfb\U4eba\U7ba1\U7406</li><li>\U652f\U6301\U652f\U4ed8\U5b9d\Uff0c\U62db\U884c\Uff0c\U5de5\U884c\Uff0c\U5efa\U884c\Uff0c\U519c\U884c\Uff0c\U4e2d\U56fd\U94f6\U884cweb\U7248\U652f\U4ed8\Uff0c\U4ee5\U53ca\U94f6\U8054\U624b\U673a\U5ba2\U6237\U7aef\U652f\U4ed8</li><li>https\U9a8c\U8bc1, \U672c\U5730\U5bc6\U7801\U52a0\U5bc6, \U6574\U4e2a\U8ba2\U7968\U6d41\U7a0b\U65e0\U4efb\U4f55\U7b2c\U4e09\U65b9\U6570\U636e\U4ea4\U4e92, \U5168\U65b9\U4f4d\U4fdd\U8bc1\U8ba2\U7968\U5b89\U5168 </li></ul></div></body></html>";
+	                                title = "\U667a\U884c\U706b\U8f66\U7968";
+	                                toolbarHidden = 1;
+	                            };
+	                            image = "zx-question-circle-h##666666";
+	                            style = value1;
+	                            text = "\U5173\U4e8e\U667a\U884c\U706b\U8f66\U7968";
+	                        },
+	                                                {
+	                            action = upgradeScript;
+	                            detail = 4206;
+	                            image = "zx-download##666666";
+	                            style = value1;
+	                            text = "\U66f4\U65b0\U63a5\U53e3\U914d\U7f6e";
+	                        },
+	                                                {
+	                            action = "t.mailSupport";
+	                            detail = "\U90ae\U4ef6";
+	                            image = "zx-message##666666";
+	                            style = value1;
+	                            text = "\U95ee\U9898\U53cd\U9988";
+	                        }
+	                    );
+	                }
+	            );
+	            tabBarItem =             {
+	                image = "zx-more@25x25";
+	                selectedImage = "zx-more-f@25x25";
+	                title = "\U66f4\U591a";
+	            };
+	            title = "\U66f4\U591a";
+	            viewDidPresent = "t.statusInMore";
+	        }
+	    );
+	    class = BBTabBarController;
+	    pageId = 1457081660753;
+	    viewDidLoad = setTabBar;
+	}
